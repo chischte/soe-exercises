@@ -1,3 +1,5 @@
+package main.java.ch.juventus.javadoc;
+
 import java.util.List;
 
 
