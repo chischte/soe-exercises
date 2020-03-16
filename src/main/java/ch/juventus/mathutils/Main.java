@@ -1,4 +1,4 @@
-package ch.juventus.collections;
+package ch.juventus.mathutils;
 
 import java.util.ArrayList;
 import java.util.List;

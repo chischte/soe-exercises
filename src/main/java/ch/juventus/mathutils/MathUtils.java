@@ -1,6 +1,5 @@
-package ch.juventus.collections;
+package ch.juventus.mathutils;
 
-import ch.juventus.logging.BankAccount;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
