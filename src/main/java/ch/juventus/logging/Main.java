@@ -5,6 +5,6 @@ public class Main {
         BankAccount michiAccount = new BankAccount("Michikonto");
         michiAccount.deposit(15000);
         michiAccount.withdraw(6000);
-        michiAccount.viewBalance();
+        System.out.println("OK: " + michiAccount.viewBalance());
     }
 }

@@ -8,25 +8,26 @@ public class BankAccount {
     final Logger logger = LoggerFactory.getLogger(BankAccount.class);
 
 
-
     private double balance;
     private String accountOwner;
 
     public BankAccount(String accountOwner) {
         this.accountOwner = accountOwner;
-        logger.debug("Account created {}",accountOwner);
+        logger.debug("Account created {}", accountOwner);
     }
 
-    public void deposit(double amount) {
+    public double deposit(double amount) {
         this.balance += amount;
+        return this.balance;
     }
 
     public void withdraw(double amount) {
         this.balance -= amount;
     }
 
-    public void viewBalance() {
+    public double viewBalance() {
         System.out.println(balance);
+        return this.balance;
     }
 
 }
