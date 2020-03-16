@@ -13,5 +13,6 @@ public class Main {
         additionList.add(1.11);
         double result=mathUtils.add(additionList);
         System.out.println(result);
+
     }
 }
