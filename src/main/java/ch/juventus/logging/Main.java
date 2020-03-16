@@ -1,4 +1,4 @@
-package main.java.ch.juventus.logging;
+package ch.juventus.logging;
 
 public class Main {
     public static void main(final String[] args) {

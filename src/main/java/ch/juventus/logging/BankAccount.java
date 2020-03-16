@@ -1,11 +1,20 @@
-package main.java.ch.juventus.logging;
+package ch.juventus.logging;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class BankAccount {
+
+    final Logger logger = LoggerFactory.getLogger(BankAccount.class);
+
+
+
     private double balance;
     private String accountOwner;
 
     public BankAccount(String accountOwner) {
         this.accountOwner = accountOwner;
+        logger.debug("Account created {}",accountOwner);
     }
 
     public void deposit(double amount) {
