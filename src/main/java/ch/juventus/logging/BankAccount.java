@@ -9,11 +9,11 @@ public class BankAccount {
     }
 
     public void deposit(double amount) {
-
+        this.balance += amount;
     }
 
     public void withdraw(double amount) {
-
+        this.balance -= amount;
     }
 
     public void viewBalance() {
