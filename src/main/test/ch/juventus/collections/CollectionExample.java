@@ -4,11 +4,7 @@ public class CollectionExample {
 
 
 
-    public void createList(){
-
-    }
-
-    public void printList(){
+    public void printHashSet(){
 
     }
 
