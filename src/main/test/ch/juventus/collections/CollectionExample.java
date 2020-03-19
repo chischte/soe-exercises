@@ -6,7 +6,7 @@ public class CollectionExample {
 
 
 
-    public void printHashSet(Set<Integer> printSet){
+    public void printHashSet(Set printSet){
         System.out.println(printSet);
 
     }
