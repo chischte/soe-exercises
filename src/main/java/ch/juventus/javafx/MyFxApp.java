@@ -1,4 +1,6 @@
+
 package ch.juventus.javafx;
+
 
 import javafx.application.Application;
 import javafx.collections.ObservableList;
@@ -33,3 +35,4 @@ public class MyFxApp extends Application {
         launch(args);
     }
 }
+
