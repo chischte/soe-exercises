@@ -1,38 +1,27 @@
-
 package ch.juventus.javafx;
 
-
 import javafx.application.Application;
-import javafx.collections.ObservableList;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.Text;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-public class MyFxApp extends Application {
+import java.net.URL;
 
+public class MyFxApp extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Text text = new Text();
-        text.setFont(new Font(45));
-        text.setX(50);
-        text.setY(150);
-        text.setText("Hello World");
+        //MyFxController controller = new MyFxController();
 
-        VBox root = new VBox(20);
-        ObservableList list = root.getChildren();
-        list.add(text);
+        //FXMLLoader loader = new FXMLLoader();
 
-        Scene scene = new Scene(root, 600, 300);
-
-        primaryStage.setTitle("Hello World Application");
-        primaryStage.setScene(scene);
+      //  loader.setLocation(new URL("file:///C:/Users/realslimshady/Documents/GitHub/soe-exercises/src/main/java/ch/juventus/javafx/myLayout.fxml"));
+       // loader.setController(controller);
+        //GridPane grid = loader.load();
+       // primaryStage.setTitle("Option 1");
+        //Scene scene = new Scene(grid, 400, 200);
+        //primaryStage.setScene(scene);
         primaryStage.show();
     }
 
-    public static void main(String args[]) {
-        launch(args);
-    }
 }
-
