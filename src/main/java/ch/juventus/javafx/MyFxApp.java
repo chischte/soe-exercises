@@ -10,13 +10,17 @@ import java.net.URL;
 // ACHTUNG: LÄUFT NUR AUF SDK 11.05 !!!!!
 
 public class MyFxApp extends Application {
+    public static final String PROJECT_PATH = "file:///C:/Users/realslimshady/Documents/GitHub/soe-exercises/";
+    public static final String LAYOUT_PATH = "src/main/java/ch/juventus/javafx/myLayout.fxml";
+
     @Override
     public void start(Stage primaryStage) throws Exception {
+
         MyFxController controller = new MyFxController();
 
         FXMLLoader loader = new FXMLLoader();
 
-        loader.setLocation(new URL("file:///C:/Users/realslimshady/Documents/GitHub/soe-exercises/src/main/java/ch/juventus/javafx/myLayout.fxml"));
+        loader.setLocation(new URL(PROJECT_PATH + LAYOUT_PATH));
         loader.setController(controller);
         GridPane grid = loader.load();
         primaryStage.setTitle("Option 1");
