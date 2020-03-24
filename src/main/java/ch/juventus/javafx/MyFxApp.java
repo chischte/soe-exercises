@@ -23,8 +23,8 @@ public class MyFxApp extends Application {
         loader.setLocation(new URL(PROJECT_PATH + LAYOUT_PATH));
         loader.setController(controller);
         GridPane grid = loader.load();
-        primaryStage.setTitle("Option 1");
-        Scene scene = new Scene(grid, 400, 200);
+        primaryStage.setTitle("Primary Stage");
+        Scene scene = new Scene(grid, 600, 400);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
