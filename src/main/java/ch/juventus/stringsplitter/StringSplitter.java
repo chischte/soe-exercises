@@ -2,8 +2,9 @@ package ch.juventus.stringsplitter;
 
 public class StringSplitter {
 
-    public String getFirstLetter(String word) {
-        return word;
+    public char getFirstChar(String word) {
+        char firstChar = word.charAt(0);
+        return firstChar;
     }
 
 }
