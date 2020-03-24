@@ -10,7 +10,7 @@ public class StringSplitter {
 
     public char getFirstChar(String word) {
         char firstChar = word.charAt(0);
-        logger.info("Got first char of {} result: {}", word, firstChar);
+        logger.info("Got first char of \"{}\" result: \"{}\"", word, firstChar);
         return firstChar;
     }
 
