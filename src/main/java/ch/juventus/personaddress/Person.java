@@ -4,13 +4,10 @@ public class Person {
     private String firstName;
     private String lastName;
     private Address address;
+    private int id;
 
-    public Person() {
-    }
-
-    public Person(String firstName, String lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Person(int id) {
+    this.id=id;
     }
 
     public void setNames(String firstName, String lastName) {
@@ -27,10 +24,10 @@ public class Person {
     }
 
     public void printPersonalData() {
-        System.out.println("First Name: " + this.firstName);
-        System.out.println("Last Name: " + this.lastName);
+        System.out.println( this.id + " Name: " + this.firstName);
+        System.out.println(this.id + " Last Name: " + this.lastName);
         String addressInfo = this.address.getAddress();
-        System.out.println("Address: " + addressInfo);
+        System.out.println(this.id + " Address: " + addressInfo);
     }
 
 }
