@@ -9,6 +9,7 @@ public class Main {
         personRepository.addPerson(3, "Robert");
 
         System.out.println(personRepository.getPersonRegister());
-
+        System.out.println(personRepository.getPersonName(1));
+        System.out.println(personRepository.getPersonName(4));
     }
 }
