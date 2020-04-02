@@ -5,8 +5,8 @@ public class PersonNotFoundException extends Exception {
         super(errorMessage);
     }
 
+    // What is the "throwable e" for?
     public PersonNotFoundException(String errorMessage, Throwable e) {
-        super(errorMessage, e);
+        super(errorMessage);
     }
-
 }
