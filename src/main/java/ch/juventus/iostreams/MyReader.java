@@ -10,7 +10,7 @@ public class MyReader {
 
     {
         try {
-            reader = new FileReader("src\\myFile.txt");
+            reader = new FileReader("src//main/java/ch/juventus/iostreams/myFile.txt");
             var data = reader.read();
             while(data !=-1){
                 char dataChar = (char)data;
