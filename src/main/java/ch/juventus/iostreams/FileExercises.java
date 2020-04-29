@@ -16,7 +16,32 @@ public class FileExercises {
         }
     }
 
-    public void deleteFile(){
-        
+    public void deleteFile() {
+        File file = new File("c:/dir/dir/dir/haudi.txt");
+        file.delete();
+
     }
+
+    public void deleteFolder() {
+        File file = new File("c:/dir");
+        deleteAll(file);
+
+    }
+
+    public boolean deleteAll(File fileToDelete) {
+        File[] files = fileToDelete.listFiles();
+        File[] filesDebug=files;
+        if (files != null) {
+            for (File file : files) {
+                if (file.isDirectory()) {
+                    deleteAll(file);
+                } else {
+                    file.delete();
+                }
+
+            }
+        }
+        return fileToDelete.delete();
+    }
+
 }

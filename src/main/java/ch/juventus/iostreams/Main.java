@@ -10,8 +10,11 @@ public class Main {
         MyReader myreader = new MyReader();
 
         // FILE CREATOR:
-        FileExercises fileExercises= new FileExercises();
+       FileExercises fileExercises= new FileExercises();
         fileExercises.createFile();
+        //fileExercises.deleteFile();
+        System.out.println("RUN WITH DEBUG BREAKPOINT IN deleteAll() TO SEE THE MAGIC HAPPEN!");
+        fileExercises.deleteFolder();
 
 
     }
