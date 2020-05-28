@@ -2,7 +2,7 @@ package ch.juventus.recursion;
 
 public class FibonacciRecursive {
 
-    public static int fibr(int n) {
+    public static long fibr(int n) {
         if (n < 2) {
             return n;
         } else {
