@@ -1,6 +1,6 @@
 package ch.juventus.compare;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     private String lastName;
     private String firstName;
@@ -31,5 +31,8 @@ public class Person {
         this.address = address;
     }
 
-
+    @Override
+    public int compareTo(Person person) {
+        return 0;
+    }
 }
