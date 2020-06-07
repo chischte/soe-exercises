@@ -1,4 +1,4 @@
-package ch.juventus.compare;
+package ch.juventus.comperator;
 
 public class Address {
     private String streetName;
@@ -9,7 +9,7 @@ public class Address {
         setCityName(cityName);
     }
 
-    public String getAddress() {
+    public String getAddressString() {
         String addressInfo = this.streetName + " " + this.cityName;
         return addressInfo;
     }

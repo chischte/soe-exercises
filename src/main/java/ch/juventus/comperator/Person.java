@@ -1,6 +1,6 @@
-package ch.juventus.compare;
+package ch.juventus.comperator;
 
-public class Person implements Comparable<Person>{
+public class Person {
 
     private String lastName;
     private String firstName;
@@ -10,9 +10,13 @@ public class Person implements Comparable<Person>{
         return lastName;
     }
 
-    public String getAddress() {
-        String addressInfo = this.address.getAddress();
+    public String getAddressString() {
+        String addressInfo = this.address.getAddressString();
         return addressInfo;
+    }
+
+    public Address getAddressObject() {
+        return this.address;
     }
 
     public void setLastName(String lastName) {
@@ -31,8 +35,5 @@ public class Person implements Comparable<Person>{
         this.address = address;
     }
 
-    @Override
-    public int compareTo(Person person) {
-        return (this.firstName.compareTo(person.firstName)*-1);
-    }
+
 }

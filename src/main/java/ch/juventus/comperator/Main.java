@@ -1,4 +1,4 @@
-package ch.juventus.compare;
+package ch.juventus.comperator;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -30,8 +30,8 @@ public class Main {
                 femalePerson, malePerson, spacePerson
         );
 
-        Collections.sort(persons);
-        persons.forEach(person -> System.out.println(person.getFirstName()));
+        Collections.sort(persons, new CompareByCity());
+        persons.forEach(person -> System.out.println(person.getFirstName() + " " + person.getAddressString()));
 
 
     }
