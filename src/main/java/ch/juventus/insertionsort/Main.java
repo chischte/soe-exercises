@@ -1,7 +1,4 @@
-package ch.juventus.sortnsearch;
-
-import java.util.Arrays;
-import java.util.List;
+package ch.juventus.insertionsort;
 
 public class Main {
     public static void main(String[] args) {

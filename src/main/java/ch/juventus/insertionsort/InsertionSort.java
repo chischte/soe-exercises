@@ -1,4 +1,4 @@
-package ch.juventus.sortnsearch;
+package ch.juventus.insertionsort;
 
 import java.util.Arrays;
 import java.util.List;
