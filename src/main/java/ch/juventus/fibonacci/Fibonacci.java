@@ -2,10 +2,15 @@ package ch.juventus.fibonacci;
 
 public class Fibonacci {
 
-    public int calculateFibonacciNumber(int fibonacciStep ){
-        int fibonacciSum=666;
+    private int fibonacciSum = 666;
 
-        return fibonacciSum;
+    public int calcFiboNumber(int n) {
+
+        if (n < 2) {
+            return n;
+        } else {
+            return calcFiboNumber(n - 2) + calcFiboNumber(n - 1);
+        }
     }
 
 }
