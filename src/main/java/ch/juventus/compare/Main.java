@@ -31,6 +31,8 @@ public class Main {
         );
 
         Collections.sort(persons);
+        persons.forEach(person -> System.out.println(person.getFirstName()));
+
 
     }
 }

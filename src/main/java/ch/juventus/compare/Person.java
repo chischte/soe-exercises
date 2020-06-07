@@ -33,6 +33,6 @@ public class Person implements Comparable<Person>{
 
     @Override
     public int compareTo(Person person) {
-        return 0;
+        return (this.firstName.compareTo(person.firstName)*-1);
     }
 }
