@@ -2,7 +2,7 @@ package ch.juventus.recursion;
 
 import java.util.Scanner;
 
-public class Palindrome {
+public class PalindromeIterative {
 
         public static void checkIfPalindrome()
         {

@@ -3,8 +3,7 @@ package ch.juventus.recursion;
 public class Main {
 
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         FibonacciIterative fibiterative = new FibonacciIterative();
         FibonacciRecursive fibirecursive = new FibonacciRecursive();
 
@@ -24,14 +23,19 @@ public class Main {
         System.out.print(timeElapsed);
         System.out.println(" [ms]");
 
-        Palindrome palindrome=new Palindrome();
-        while(true) {
+
+        // EXAMPLE OF A RECURSIVE PALINDROME ALGORITHM:
+        PalindromeRecursive palindromeRecursive = new PalindromeRecursive();
+        palindromeRecursive.checkIfPalindrome("bbbAlgolabbb");
+
+        // EXAMPLE OF AN ITERATIVE PALINDROME ALGORITHM:
+        PalindromeIterative palindrome = new PalindromeIterative();
+        while (true) {
             palindrome.checkIfPalindrome();
         }
 
 
     }
-
 
 
 }
