@@ -13,7 +13,9 @@ public class Main {
         b.start();
         c.start();
 
+
         // Beispiel mit runnable threads:
+
         Runnable x = new RunnableThread();
 
         Thread x1=new Thread(x);
@@ -22,13 +24,20 @@ public class Main {
 
         System.out.println("State thread 1 " + x1.getState());
         System.out.println("State thread 2 " + x2.getState());
-        System.out.println("State thread 2 " + x3.getState());
+        System.out.println("State thread 3 " + x3.getState());
 
         x1.start();
 
         System.out.println("State thread 1 " + x1.getState());
         System.out.println("State thread 2 " + x2.getState());
-        System.out.println("State thread 2 " + x3.getState());
+        System.out.println("State thread 3 " + x3.getState());
+
+        x2.start();
+
+        System.out.println("State thread 1 " + x1.getState());
+        System.out.println("State thread 2 " + x2.getState());
+        System.out.println("State thread 3 " + x3.getState());
+
 
     }
 }
