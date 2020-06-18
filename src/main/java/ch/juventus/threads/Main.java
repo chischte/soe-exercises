@@ -4,20 +4,21 @@ public class Main {
 
     public static void main(String[] args) {
 
-        java.lang.Thread a = new ExampleThread();
-        java.lang.Thread b = new ExampleThread();
-        java.lang.Thread c = new ExampleThread();
-        java.lang.Thread d = new ExampleThread();
-        java.lang.Thread e = new ExampleThread();
-        java.lang.Thread f = new ExampleThread();
-        java.lang.Thread g = new ExampleThread();
+        java.lang.Thread a = new LangThread();
+        java.lang.Thread b = new LangThread();
+        java.lang.Thread c = new LangThread();
         a.start();
         b.start();
         c.start();
-        d.start();
-        e.start();
-        f.start();
-        g.start();
+
+        // Thread x = new RunnableThread();
+        // Runnable y = new RunnableThread();
+        // Runnable z = new RunnableThread();
+        // new Thread(x).start();
+        // new Thread(y).start();
+        // new Thread(z).start();
+        // System.out.println(x.getState());
+
 
     }
 }
