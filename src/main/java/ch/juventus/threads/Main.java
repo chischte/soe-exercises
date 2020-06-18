@@ -4,6 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Beispiel mit lang threads
+
         java.lang.Thread a = new LangThread();
         java.lang.Thread b = new LangThread();
         java.lang.Thread c = new LangThread();
@@ -11,14 +13,22 @@ public class Main {
         b.start();
         c.start();
 
-        // Thread x = new RunnableThread();
-        // Runnable y = new RunnableThread();
-        // Runnable z = new RunnableThread();
-        // new Thread(x).start();
-        // new Thread(y).start();
-        // new Thread(z).start();
-        // System.out.println(x.getState());
+        // Beispiel mit runnable threads:
+        Runnable x = new RunnableThread();
 
+        Thread x1=new Thread(x);
+        Thread x2=new Thread(x);
+        Thread x3=new Thread(x);
+
+        System.out.println("State thread 1 " + x1.getState());
+        System.out.println("State thread 2 " + x2.getState());
+        System.out.println("State thread 2 " + x3.getState());
+
+        x1.start();
+
+        System.out.println("State thread 1 " + x1.getState());
+        System.out.println("State thread 2 " + x2.getState());
+        System.out.println("State thread 2 " + x3.getState());
 
     }
 }
