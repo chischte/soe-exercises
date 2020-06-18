@@ -4,7 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Beispiel mit lang threads
+        // Example using "lang threads"
 
         java.lang.Thread a = new LangThread();
         java.lang.Thread b = new LangThread();
@@ -14,7 +14,7 @@ public class Main {
         c.start();
 
 
-        // Beispiel mit runnable threads:
+        // Example using "runnable threads":
 
         Runnable x = new RunnableThread();
 
