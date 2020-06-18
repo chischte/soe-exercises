@@ -4,13 +4,13 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Thread a = new MyThread();
-        Thread b = new MyThread();
-        Thread c = new MyThread();
-        Thread d = new MyThread();
-        Thread e = new MyThread();
-        Thread f = new MyThread();
-        Thread g = new MyThread();
+        java.lang.Thread a = new ExampleThread();
+        java.lang.Thread b = new ExampleThread();
+        java.lang.Thread c = new ExampleThread();
+        java.lang.Thread d = new ExampleThread();
+        java.lang.Thread e = new ExampleThread();
+        java.lang.Thread f = new ExampleThread();
+        java.lang.Thread g = new ExampleThread();
         a.start();
         b.start();
         c.start();
