@@ -2,7 +2,7 @@ package ch.juventus.socketproject;
 
 import java.io.Serializable;
 
-public class SolutionObject implements Serializable {
+public class Solution implements Serializable {
     private String solution;
     private String name;
 

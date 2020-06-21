@@ -1,6 +1,6 @@
 package ch.juventus.socketproject;
 
-public class QuestionObject {
+public class Question {
     private String question="WTF?";
 
         public String getQuestion() {

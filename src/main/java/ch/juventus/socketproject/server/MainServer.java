@@ -1,7 +1,6 @@
 package ch.juventus.socketproject.server;
 
-import ch.juventus.socketproject.QuestionObject;
-import ch.juventus.socketproject.SolutionObject;
+import ch.juventus.socketproject.Solution;
 
 public class MainServer {
 
@@ -18,7 +17,7 @@ public class MainServer {
 
         // RECEIVE SOLUTION
 
-        SolutionObject solution= serverSocket.receiveAnswer();
+        Solution solution= serverSocket.receiveAnswer();
         System.out.println(solution.getName());
         System.out.println(solution.getSolution());
     }
