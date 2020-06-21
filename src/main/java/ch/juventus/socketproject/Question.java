@@ -1,6 +1,8 @@
 package ch.juventus.socketproject;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable {
     private String question="WTF?";
 
         public String getQuestion() {

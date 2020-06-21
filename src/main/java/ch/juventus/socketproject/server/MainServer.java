@@ -1,5 +1,6 @@
 package ch.juventus.socketproject.server;
 
+import ch.juventus.socketproject.Question;
 import ch.juventus.socketproject.Solution;
 
 public class MainServer {
@@ -10,8 +11,8 @@ public class MainServer {
         SocketManagerServer serverSocket = new SocketManagerServer();
 
         // SEND QUESTION
-//        QuestionObject question = new QuestionObject();
-//        serverSocket.sendQuestion(question);
+        Question question = new Question();
+        serverSocket.sendQuestion(question);
 
 
 
