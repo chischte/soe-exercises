@@ -13,12 +13,12 @@ public class SocketManagerClient {
    SolutionObject solutionObject = new SolutionObject();
 
 
-    public void sendToServer(){
+    public void sendToServer(SolutionObject solution){
         try (
                 Socket client = new Socket("machinelogger.synology.me", 8888);
                 ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
         ) {
-            out.writeObject(solutionObject);
+            out.writeObject(solution);
             out.flush();
         } catch (IOException e) {
             e.printStackTrace();
