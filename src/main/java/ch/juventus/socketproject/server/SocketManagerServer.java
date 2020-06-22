@@ -2,6 +2,7 @@ package ch.juventus.socketproject.server;
 
 import ch.juventus.socketproject.Question;
 import ch.juventus.socketproject.Answer;
+
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -39,21 +40,15 @@ public class SocketManagerServer {
         }
     }
 
-    public void createInputStream(){
+    public Answer receiveAnswer() {
+        Answer answer = null;
         try {
             in = new ObjectInputStream(client.getInputStream());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public Answer receiveAnswer() {
-        Answer answer = new Answer();
-        try {
             answer = (Answer) in.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (
+                IOException e) {
             e.printStackTrace();
         }
         return answer;

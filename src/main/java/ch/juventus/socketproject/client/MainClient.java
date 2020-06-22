@@ -9,19 +9,20 @@ public class MainClient {
     public static void main(String[] args) {
 
         // CREATE AN INSTANCE OF THE SOCKET MANAGER:
-        SocketManagerClient clientSocket = new SocketManagerClient();
+        SocketManagerClient socketManager = new SocketManagerClient();
 
         // GET SOCKET SERVER
-        clientSocket.getSocketConnection();
+        socketManager.getSocketConnection();
 
-        // RECEIVE QUESTION FROM CLIENT SOCKET:
-        Question question = clientSocket.receiveQuestion();
+        // RECEIVE QUESTION:
+        Question question = socketManager.receiveQuestion();
 
+        // SEND ANSWER:
         Answer answer = new Answer();
         answer.setName("Hans Schaudi");
         answer.setAnswer("243248");
 
-        clientSocket.sendAnswer(answer);
+        socketManager.sendAnswer(answer);
 
 
     }

@@ -12,6 +12,7 @@ public class SocketManagerClient {
 
     Answer answer = new Answer();
     public Socket client = null;
+    ObjectInputStream in = null;
 
 
     public void getSocketConnection() {
@@ -24,15 +25,12 @@ public class SocketManagerClient {
 
     public Question receiveQuestion() {
         Question question = null;
-        ObjectInputStream in = null;
         try {
             in = new ObjectInputStream(client.getInputStream());
-            try {
-                question = (Question) in.readObject();
-            } catch (ClassNotFoundException e) {
-                e.printStackTrace();
-            }
+            question = (Question) in.readObject();
         } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         System.out.println(question.getQuestion());

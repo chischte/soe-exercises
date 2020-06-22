@@ -8,23 +8,20 @@ public class MainServer {
     public static void main(String[] args) {
 
         // CREATE AN INSTANCE OF THE SOCKET MANAGER:
-        SocketManagerServer serverSocket = new SocketManagerServer();
+        SocketManagerServer socketManager = new SocketManagerServer();
 
         // CREATE SOCKET
-        serverSocket.createSocket();
+        socketManager.createSocket();
 
         // GET CLIENT CONNECTION
-        serverSocket.getClientConnection();
+        socketManager.getClientConnection();
 
         // SEND QUESTION
         Question question = new Question();
-        serverSocket.sendQuestion(question);
-
-
-        serverSocket.createInputStream();
+        socketManager.sendQuestion(question);
 
         // RECEIVE ANSWER
-        Answer answer = serverSocket.receiveAnswer();
+        Answer answer = socketManager.receiveAnswer();
         System.out.println(answer.getName());
         System.out.println(answer.getAnswer());
     }
