@@ -18,17 +18,17 @@ public class MainClient {
         SocketManagerClient clientSocket = new SocketManagerClient();
 
         // GET SOCKET SERVER
-        Socket client = clientSocket.getSocketConnection();
+        Socket server = clientSocket.getSocketConnection();
 
         // RECEIVE QUESTION FROM CLIENT SOCKET:
         //clientSocket.receiveQuestion(client);
-        Question question = clientSocket.receiveQuestion(client);
+        Question question = clientSocket.receiveQuestion(server);
 
         Solution solution = new Solution();
         solution.setName("Hans Schaudi");
         solution.setSolution("243248");
 
-        clientSocket.sendAnswer(solution);
+        clientSocket.sendAnswerToServer(solution,server);
 
 
     }

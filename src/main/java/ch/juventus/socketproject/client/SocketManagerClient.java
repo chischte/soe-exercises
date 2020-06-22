@@ -17,30 +17,47 @@ public class SocketManagerClient {
 
 
     public Socket getSocketConnection() {
-
         Socket client = null;
-        client = new Socket("machinelogger.synology.me", 8888);
+        try {
+            client = new Socket("machinelogger.synology.me", 8888);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return client;
     }
 
-
     public Question receiveQuestion(Socket client) {
         Question question = null;
-        ObjectInputStream in = new ObjectInputStream(client.getInputStream());
-        question = (Question) in.readObject();
+        ObjectInputStream in = null;
+        try {
+            in = new ObjectInputStream(client.getInputStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            question = (Question) in.readObject();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
         System.out.println(question.getQuestion());
         return question;
     }
 
-    public void sendAnswer(Solution solution) {
-        try (
-                Socket client = new Socket("machinelogger.synology.me", 8888);
-                ObjectOutputStream out = new ObjectOutputStream(client.getOutputStream());
-        ) {
+    public void sendAnswerToServer(Solution solution, Socket server) {
+        ObjectOutputStream out = null;
+        try {
+            out = new ObjectOutputStream(server.getOutputStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
             out.writeObject(solution);
             out.flush();
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 }
