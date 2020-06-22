@@ -11,6 +11,7 @@ import java.net.Socket;
 public class SocketManagerServer {
     public Socket client = new Socket();
     public ServerSocket server = null;
+    public ObjectInputStream in = null;
 
     public void createSocket() {
         try {
@@ -38,14 +39,16 @@ public class SocketManagerServer {
         }
     }
 
-    public Answer receiveAnswer() {
-        Answer answer = new Answer();
-        ObjectInputStream in = null;
+    public void createInputStream(){
         try {
             in = new ObjectInputStream(client.getInputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public Answer receiveAnswer() {
+        Answer answer = new Answer();
         try {
             answer = (Answer) in.readObject();
         } catch (IOException e) {

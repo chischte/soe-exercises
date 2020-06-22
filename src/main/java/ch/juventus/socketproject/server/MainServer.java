@@ -20,7 +20,10 @@ public class MainServer {
         Question question = new Question();
         serverSocket.sendQuestion(question);
 
-        // RECEIVE SOLUTION
+
+        serverSocket.createInputStream();
+
+        // RECEIVE ANSWER
         Answer answer = serverSocket.receiveAnswer();
         System.out.println(answer.getName());
         System.out.println(answer.getAnswer());
