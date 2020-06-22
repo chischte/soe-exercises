@@ -1,59 +1,53 @@
 package ch.juventus.socketproject.client;
 
 import ch.juventus.socketproject.Question;
-import ch.juventus.socketproject.Solution;
+import ch.juventus.socketproject.Answer;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
-import java.io.OutputStreamWriter;
-import java.net.ServerSocket;
 import java.net.Socket;
 
 public class SocketManagerClient {
 
-    OutputStreamWriter streamWriter;
-    Solution solution = new Solution();
+    Answer answer = new Answer();
+    public Socket client = null;
 
 
-    public Socket getSocketConnection() {
-        Socket client = null;
+    public void getSocketConnection() {
         try {
             client = new Socket("machinelogger.synology.me", 8888);
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return client;
     }
 
-    public Question receiveQuestion(Socket client) {
+    public Question receiveQuestion() {
         Question question = null;
         ObjectInputStream in = null;
         try {
             in = new ObjectInputStream(client.getInputStream());
+            try {
+                question = (Question) in.readObject();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         } catch (IOException e) {
-            e.printStackTrace();
-        }
-        try {
-            question = (Question) in.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
         System.out.println(question.getQuestion());
         return question;
     }
 
-    public void sendAnswerToServer(Solution solution, Socket server) {
+    public void sendAnswer(Answer answer) {
         ObjectOutputStream out = null;
         try {
-            out = new ObjectOutputStream(server.getOutputStream());
+            out = new ObjectOutputStream(client.getOutputStream());
         } catch (IOException e) {
             e.printStackTrace();
         }
         try {
-            out.writeObject(solution);
+            out.writeObject(answer);
             out.flush();
         } catch (IOException e) {
             e.printStackTrace();

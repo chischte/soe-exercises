@@ -1,9 +1,7 @@
 package ch.juventus.socketproject.server;
 
 import ch.juventus.socketproject.Question;
-import ch.juventus.socketproject.Solution;
-
-import java.net.ServerSocket;
+import ch.juventus.socketproject.Answer;
 
 public class MainServer {
 
@@ -11,19 +9,20 @@ public class MainServer {
 
         // CREATE AN INSTANCE OF THE SOCKET MANAGER:
         SocketManagerServer serverSocket = new SocketManagerServer();
-        // GET SOCKET SERVER
-        ServerSocket server = serverSocket.getSocketConnection();
+
+        // CREATE SOCKET
+        serverSocket.createSocket();
+
+        // GET CLIENT CONNECTION
+        serverSocket.getClientConnection();
 
         // SEND QUESTION
         Question question = new Question();
-        serverSocket.sendQuestionToServer(question,server);
-
-
+        serverSocket.sendQuestion(question);
 
         // RECEIVE SOLUTION
-
-        Solution solution= serverSocket.receiveAnswerFromServer(server);
-        System.out.println(solution.getName());
-        System.out.println(solution.getSolution());
+        Answer answer = serverSocket.receiveAnswer();
+        System.out.println(answer.getName());
+        System.out.println(answer.getAnswer());
     }
 }
