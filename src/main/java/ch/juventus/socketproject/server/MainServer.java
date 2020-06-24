@@ -10,17 +10,17 @@ public class MainServer {
         // CREATE AN INSTANCE OF THE SOCKET MANAGER:
         SocketManagerServer socketManager = new SocketManagerServer();
 
-        // CREATE SOCKET
+        // CREATE SOCKET:
         socketManager.createSocket();
 
-        // GET CLIENT CONNECTION
+        // GET CLIENT CONNECTION:
         socketManager.getClientConnection();
 
-        // SEND QUESTION
+        // SEND QUESTION:
         Question question = new Question();
         socketManager.sendQuestion(question);
 
-        // RECEIVE ANSWER
+        // RECEIVE ANSWER:
         Answer answer = socketManager.receiveAnswer();
         System.out.println(answer.getName());
         System.out.println(answer.getAnswer());

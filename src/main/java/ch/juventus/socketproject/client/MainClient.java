@@ -11,7 +11,7 @@ public class MainClient {
         // CREATE AN INSTANCE OF THE SOCKET MANAGER:
         SocketManagerClient socketManager = new SocketManagerClient();
 
-        // GET SOCKET SERVER
+        // GET SOCKET SERVER:
         socketManager.getSocketConnection();
 
         // RECEIVE QUESTION:
