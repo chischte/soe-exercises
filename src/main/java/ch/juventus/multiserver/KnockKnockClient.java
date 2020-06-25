@@ -10,14 +10,16 @@ import java.net.UnknownHostException;
 public class KnockKnockClient {
     public static void main(String[] args) throws IOException {
 
-        if (args.length != 2) {
-            System.err.println(
-                    "Usage: java EchoClient <host name> <port number>");
-            System.exit(1);
-        }
+//        if (args.length != 2) {
+//            System.err.println(
+//                    "Usage: java EchoClient <host name> <port number>");
+//            System.exit(1);
+//        }
 
-        String hostName = args[0];
-        int portNumber = Integer.parseInt(args[1]);
+//        String hostName = args[0];
+        String hostName = "127.0.0.1";
+//        int portNumber = Integer.parseInt(args[1]);
+        int portNumber = 8888;
 
         try (
                 Socket kkSocket = new Socket("127.0.0.1", 5555);
