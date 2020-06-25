@@ -8,7 +8,6 @@ import java.util.stream.Stream;
 public class Main {
     public static void main(String[] args) {
 
-
         Person personOne = new Person();
         personOne.setName("Hans Schaudi");
         personOne.setAge(111);
